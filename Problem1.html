@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Problem 1</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Problem 1:</h1>
+
+    <p id="text1"> </p> <br>
+    <p id="text2"> </p>
+
+    <script>
+    function calculateAge () {
+      birthYear = document.getElementById("num1").value;
+      currentYear = document.getElementById("num2").value;
+      var age = currentYear - birthYear;
+      if (!isNaN(age)) {
+        if (age < 18){
+            document.getElementById("text1").innerHTML = 'Your state is: "Teenager"'  ;
+            document.getElementById("text2").innerHTML = 'Your age is: "';
+        }
+        else if ((age > 18) & (age < 35)){
+          document.getElementById("text1").innerHTML = 'Your state is: "Adult"' ;
+        }
+        else {
+          document.getElementById("text1").innerHTML = 'Your state is: "Mature Adult"' ;
+        }
+      }
+      else{
+        text = "Please enter a number."
+      }
+    }
+
+    </script>
+
+    <p>
+      Birth year:
+      <input id="num1" name="birthYear"> <br>
+      Current year:
+      <input id="num2" name="currentYear"> <br>
+    </p>
+
+    <button type="button" onclick="calculateAge()">Submit</button>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
