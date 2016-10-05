@@ -16,7 +16,7 @@
   <div class="container">
     <h1>Problem 1:</h1>
 
-    <p id="text1"> </p> <br>
+    <p id="text1"> </p>
     <p id="text2"> </p>
 
     <script>
@@ -24,20 +24,23 @@
       birthYear = document.getElementById("num1").value;
       currentYear = document.getElementById("num2").value;
       var age = currentYear - birthYear;
+      var text = 'Your age is: "' + age + '"';
       if (!isNaN(age)) {
         if (age < 18){
             document.getElementById("text1").innerHTML = 'Your state is: "Teenager"'  ;
-            document.getElementById("text2").innerHTML = 'Your age is: "';
+            document.getElementById("text2").innerHTML = text;
         }
         else if ((age > 18) & (age < 35)){
           document.getElementById("text1").innerHTML = 'Your state is: "Adult"' ;
+          document.getElementById("text2").innerHTML = text;
         }
         else {
           document.getElementById("text1").innerHTML = 'Your state is: "Mature Adult"' ;
+          document.getElementById("text2").innerHTML = text;
         }
       }
       else{
-        text = "Please enter a number."
+        document.getElementById("text1").innerHTML = "Please enter a number.";
       }
     }
 
