@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Problem 3 </title>
+  <script>
+    function movies(){
+      document.getElementById("line1").innerHTML = "Movie information: ";
+      var n = document.getElementById("newMovie").innerHTML;
+      var stars = "stars: " + document.getElementById("stars").innerHTML;
+
+
+      document.getElementById("line2").innerHTML = document.getElementById("newMovie").innerHTML;
+      document.getElementById("line3").innerHTML = stars ;
+    }
+
+  </script>
+</head>
+
+<body>
+ <h1> Problem 3: </h1>
+ <p id=line1> </p>
+ <p id=line2> </p>
+ <p id=line3> </p>
+ <p> Movie: <input id="newMovie" name="newMovie"> <br></p>
+ <p> Stars: <input id="stars" name="cast"> <br> </p>
+
+ <button type="button" onclick="movies()">Save</button>
+
+
+</body>
+</html>
