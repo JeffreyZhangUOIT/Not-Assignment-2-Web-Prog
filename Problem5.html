@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Problem 4 </title>
+  <style>
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Popup container */
+  .popup {
+    position: fixed;
+    display: block;
+    cursor: pointer;
+  }
+
+  /* The actual popup (appears on top) */
+   .popBotR {
+    visibility: hidden;
+    background-color: #CACACA;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    border: no-border;
+  }
+   .popBotL {
+    visibility: hidden;
+    position: fixed;
+    background-color: #CACACA;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    border: no-border;
+  }
+   .popTopL {
+    visibility: hidden;
+    position: fixed;
+    background-color: #CACACA;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    border: no-border;
+  }
+   .popTopR {
+    visibility: hidden;
+    background-color: #CACACA;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    border: no-border;
+  }
+  .popCent {
+   visibility: hidden;
+   background-color: #CACACA;
+   position: fixed;
+   top: 35%;
+   right: 35%;
+   width: 30%;
+   height: 30%;
+   border: no-border;
+ }
+
+
+
+
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="popup">
+    <img src="./images/durian.jpg" alt="Missing durian.jpg" onclick="openPopup()" style.height=20px>
+
+    <div class="popBotR" id="myPopupBL">
+      <!-- Google seems to be broken, and doesn't like being linked to. -->
+      <iframe src="http://www.w3schools.com" name=iframe_a> </iframe>
+    </div>
+
+    <div class="popBotL" id="myPopupBR">
+      <!-- Google seems to be broken, and doesn't like being linked to. -->
+      <iframe src="http://www.w3schools.com" name=iframe_a> </iframe>
+    </div>
+
+    <div class="popTopL" id="myPopupTR">
+        <!-- Google seems to be broken, and doesn't like being linked to. -->
+        <iframe src="http://www.w3schools.com" name=iframe_a> </iframe>
+      </div>
+
+    <div class="popTopR" id="myPopupTL">
+        <!-- Google seems to be broken, and doesn't like being linked to. -->
+        <iframe src="http://www.w3schools.com" name=iframe_a> </iframe>
+      </div>
+
+    <div class="popCent" id="myPopupCent">
+        <!-- Google seems to be broken, and doesn't like being linked to. -->
+        <iframe src="http://www.w3schools.com" name=iframe_a> </iframe>
+      </div>
+
+
+    <br>
+    <button type="button" onclick="closeTab()"> Close tab! </button>
+  </div>
+
+
+
+  <script>
+  function closeTab() {
+    var popup = document.getElementById('myPopup');
+    popup.classList.toggle('show');
+  }
+  function openPopup() {
+    var popupBL = document.getElementById('myPopupBL');
+    var popupBR = document.getElementById('myPopupBR');
+    var popupTL = document.getElementById('myPopupTL');
+    var popupTR = document.getElementById('myPopupTR');
+    var popupCent = document.getElementById('myPopupCent');
+    popupBL.classList.toggle('show');
+    popupBR.classList.toggle('show');
+    popupTL.classList.toggle('show');
+    popupTR.classList.toggle('show');
+    popupCent.classList.toggle('show');
+  }
+  </script>
+
+</body>
+</html>
