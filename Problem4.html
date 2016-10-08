@@ -1,9 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Problem 4 </title>
+  <title> Problem 4 </title>
+  <style>
+  img {
+    width: 50%;
+    height: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Popup container */
+  .popup {
+    position: fixed;
+    display: block;
+    cursor: pointer;
+  }
+
+  /* The actual popup (appears on top) */
+  .popup .popWeb {
+    visibility: hidden;
+    position: fixed;
+      bottom: 10px;
+      right: 0;
+      width: 50%;
+      height: 50%;
+      border: no-border;
+  }
+
+
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+  }
+  </style>
 </head>
 
 <body>
+
+<div class="popup">
+  <img src="./images/durian.jpg" alt="Missing durian.jpg" onclick="openPopup()" style.height=20px>
+
+  <div class="popWeb" id="myPopup">
+    <!-- Google seems to be broken, and doesn't like being linked to. -->
+     <iframe src="http://www.w3schools.com" name=iframe_a> </iframe>
+    </div>
+    <br>
+  <button type="button" onclick="closeTab()"> Close tab! </button>
+</div>
+
+
+
+<script>
+function closeTab() {
+  var popup = document.getElementById('myPopup');
+  popup.classList.toggle('show');
+}
+function openPopup() {
+  var popup = document.getElementById('myPopup');
+  popup.classList.toggle('show');
+}
+</script>
+
 </body>
 </html>
